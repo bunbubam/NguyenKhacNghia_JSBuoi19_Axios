@@ -126,6 +126,36 @@ function updateProduct(id) {
     })
 }
 
+getEle("enter").addEventListener("click", function(){
+    var keywordSearch = getEle("txtSearch").value
+    danhSachSanPham.searchProdcutIDAPI(keywordSearch)
+    .then(function(rs){
+        table(rs.data)
+    })
+    .catch(function(error){
+        console.log(error);
+    })
+})
+
+function table(rs) {
+    var content = "";
+    content += `
+        <tr>
+            <td>${rs.id}</td>
+            <td>${rs.name}</td>
+            <td>${rs.price}</td>
+            <td>${rs.cauhinh}</td>
+            <td>${rs.moTa}</td>
+            <td>${rs.manhinh}</td>
+            <td>
+                <button class="btn btn-warning" onclick="editProduct(${rs.id})" data-toggle="modal" data-target="#myModal">Sửa</button>
+                <button class="btn btn-danger" onclick="deleteProduct(${rs.id})">Xóa</button>
+            </td>
+        </tr>
+    `
+    document.getElementById("tblDanhSachSP").innerHTML=content
+}
+
 function clearData() {
     getEle("TenSP").value = ""
     getEle("GiaSP").value = ""

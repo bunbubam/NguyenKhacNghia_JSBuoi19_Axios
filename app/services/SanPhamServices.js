@@ -31,4 +31,10 @@ function SanPhamServices() {
             data : product,
         })
     }
+    this.searchProdcutIDAPI = function(id) {
+        return axios({
+            url : `https://621b7e12faa12ee4500f16b8.mockapi.io/manager/user/${id}`,
+            method : "GET",
+        })
+    }
 }
