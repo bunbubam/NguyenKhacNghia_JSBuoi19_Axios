@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quản lý sản phẩm</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./../../assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="d-flex flex-column align-items-center w-100 h-100 mt-5">
+
+    <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="table-block position-relative">
+              <h2 class="h2 text-center text-uppercase font-weight-bold mb-3 mb-md-5">Danh sách sản phẩm</h2>
+              <div class="add-btn">
+                <button class="btn" id="btnThemSP" data-toggle="modal" data-target="#myModal">Thêm sản phẩm</button>
+              </div>
+              <div class="search-block">
+                <label class="w-100 text-white text-md-justify text-center d-md-flex flex-row align-items-center justify-content-between">Search <span class="w-100 ml-md-2"><input type="search" class="form-control" placeholder=""></span>
+                </label>
+              </div>
+              <div class="table-responsive">
+                <table class="table table-bordered mt-4">
+                  <thead>
+                    <tr>
+                      <th class="text-center">STT</th>
+                      <th>Tên Sản Phẩm</th>
+                      <th>Giá</th>
+                      <th>Cấu hình</th>
+                      <th>Mô Tả</th>
+                      <th>Màn hình</th>                
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tblDanhSachSP"></tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="container"><div class="copyright text-white text-center m-4">©2022 - Web4 (Chou + Nghĩa). All Rights Reserved.</div></div>
+
+    <div class="modal fade" id="myModal" aria-hidden="true" style="display: none;">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title"></h4>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="form-group">
+              <label>Tên Sản Phẩm</label>
+              <input id="TenSP" class="form-control" placeholder="Nhập vào tên sản phẩm">
+              <small id="tbTen" class="form-text"></small>
+            </div>
+            <div class="form-group">
+              <label>Giá</label>
+              <input id="GiaSP" class="form-control" placeholder="Nhập vào giá">
+              <small id="tbGiaSP" class="form-text"></small>
+            </div>             
+            <div class="form-group">
+              <label>Cấu Hình</label>
+              <input id="CauhHinhSP" class="form-control" placeholder="Nhập vào cấu hình sản phẩm">
+              <small id="tbCauhHinhSP" class="form-text"></small>
+            </div>
+            <div class="form-group">
+              <label>Mô tả</label>
+              <input id="moTaSP" class="form-control" placeholder="Nhập vào Mô tả sản phẩm">
+              <small id="tbmoTaSP" class="form-text"></small>
+            </div>
+            <div class="form-group">
+              <label>Màn hình</label>
+              <input id="ManHinhSP" class="form-control" placeholder="Nhập vào màn hình sản phẩm">
+              <small id="tbManHinhSP" class="form-text"></small>
+            </div>
+          </div>
+          <!-- Modal footer -->
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/modules/series-label.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
+    <script src="../services/SanPham.js"></script>
+    <script src="../services/SanPhamServices.js"></script>
+    <script src="../controllers/validation.js"></script>
+    <script src="../controllers/main.js"></script>
+  </body>
+</html>

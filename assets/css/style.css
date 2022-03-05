@@ -1,0 +1,107 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+    color: rgb(0, 0, 0);
+    background-image: url(./../img/bg-devl-min.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.table-block {
+    background: url(./../img/bg-table.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 0px 3px 3px #0003;
+    border-radius: 1rem;
+    padding: 30px;
+    padding-top: 43px;
+}
+.table-block h2 {
+    color: #d72219;
+    font-size: 30px;
+}
+.add-btn {
+    position: absolute;
+    top: 39px;
+    left: 0;
+    border-radius: 0 40px 40px 0;
+    padding: 5px 5px 5px 0;
+    background: #D80917;
+    background: -webkit-linear-gradient(top left, #D80917, #F92844);
+    background: -moz-linear-gradient(top left, #D80917, #F92844);
+    background: linear-gradient(to bottom right, #D80917, #F92844);
+    transition: all 0.5s ease;
+}
+.add-btn .btn {
+    color: #ffffff;
+    border-radius: 0 40px 40px 0;
+    border-width: 2px 2px 2px 0;
+    border-style: dashed;
+    border-color: #ffffff;
+    background: transparent;
+}
+.btn.focus, .btn:focus {box-shadow: none;}
+.add-btn:hover {background: #ffffff;}
+.add-btn:hover .btn {
+    color: #F92844;
+    border-color: #F92844;
+}
+.search-block .form-control {
+    font-size: .97em;
+    color: rgba(0,0,0,.87);
+    height: 2.507em;
+    border-color: rgba(34,36,38,.15);
+    border-radius: 1rem;
+    box-shadow: 0px 3px 3px #0003;
+}
+.table th, .table td {
+    border-width: 2px;
+    border-color: #fcdb00;
+    background: #fff;
+    height: 42px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ff0000;
+    min-height: 25px;
+    max-width: unset;
+    word-wrap: unset;
+    white-space: nowrap;
+    overflow-x: unset;
+    
+}
+.table thead th {border-color: #fcdb00;}
+.table tbody td {
+    font-size: 18px;
+    font-weight: 500;
+    color: #3c3c3c;
+}
+.table tbody td button {
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.table tbody td:first-child {text-align: center;}
+.modal-content {
+    padding: 18px;
+    border-radius: 0px;
+    border: 20px outset #dd3333;
+    box-shadow: 1px 1px 3px 0px rgb(2 2 2 / 97%) inset;
+    background-color: rgba( 255, 251, 239, 1.00 );
+}
+.copyright {font-size: 14px;}
+
+@media (max-width:767px) {
+    .table-block h2 {font-size: 24px;}
+    .add-btn {
+        position: initial;
+        border-radius: 40px;
+        padding: 5px;
+        margin-bottom: 15px;
+    }
+    .add-btn .btn {
+        border: 1px dashed #ffffff;
+        width: 100%;
+        border-radius: 40px;
+    }
+}
