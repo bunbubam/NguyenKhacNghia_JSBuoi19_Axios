@@ -8,6 +8,7 @@ function getEle(id) {
 function getData() {
     danhSachSanPham.getListProductAPI()
     .then(function(result){
+        console.log(result.data);
         renderListProduct(result.data)
     })
     .catch(function(error){
@@ -17,7 +18,7 @@ function getData() {
 getData()
 
 function renderListProduct(list) {
-    var content = "";
+    var content = ""
     for(var i = 0; i < list.length; i++){
         content += `
             <tr>
